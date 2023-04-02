@@ -39,12 +39,13 @@ module.exports.create = function(req, res){
         date : newDate
     }, function(err){
         if(err){
-            console.log('Error creating Contact');
+            console.log('Error creating Contact',err);
             return;
         }
         return res.redirect('back');
     });
 }
+
 
 module.exports.edit = function (req, res) {
     console.log(req.body);

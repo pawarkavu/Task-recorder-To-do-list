@@ -5,14 +5,15 @@
 
     <link rel="stylesheet" href="/css/home.css">
     <!-- Added fontawesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 
 <body>
     <!-- Main Container where all the data is shown -->
     <section id="main-container">
         <!-- App Title -->
-        <h1 class="text-color"  id="app-title">TODO App</h1>
+        <h1 class="text-color" id="app-title">My TODO List</h1>
 
         <!-- Separator -->
         <div class="horizontal-line"></div>
@@ -24,7 +25,7 @@
                 <label for="desc-input"> description </label>
                 <input type="text" name="description" id="desc-input" placeholder="What do you need to do ?" required>
             </div>
-            
+
             <!-- Separator -->
             <div class="horizontal-line"></div>
 
@@ -63,12 +64,12 @@
             <div id="action-buttons">
 
                 <!-- button to add a new task and sumbit form -->
-                <button id="add-button" type="submit"> 
+                <button id="add-button" type="submit">
                     <i class="fas fa-plus"></i>
-                    <span>Add Task</span> 
+                    <span>Add Task</span>
                 </button>
 
-                
+
 
                 <!-- button to delete all the selected tasks -->
                 <button id="delete-button" type="submit" form="tasks-list-form">
@@ -85,70 +86,77 @@
                 <div>
                     <div class="horizontal-line"></div>
                     <div class="task">
-                        <input id="check" type="checkbox" name="id" value="<%= i.id %>" >
+                        <input id="check" type="checkbox" name="id" value="<%= i.id %>">
                         <div class="task-data">
-                            <p> <%= i.description %> </p>
+                            <p>
+                                <%= i.description %>
+                            </p>
                             <i class="fas fa-calendar-alt"></i>
-                            <span> <%= i.date %> </span>
+                            <span>
+                                <%= i.date %>
+                            </span>
                         </div>
                         <!-- button to edit a new task and sumbit form -->
                         <button id="edit-button" type="button">
                             <i class="fas fa-regular fa-pen"></i>
                         </button>
-                        <button type="button" style="background-color: <%= color_list[i.category] %>;"> <%= i.category %> </button>
+                        <button type="button" style="background-color: <%= color_list[i.category] %>;">
+                            <%= i.category %>
+                        </button>
                     </div>
                 </div>
-            <%}%>
-            </form>
-            
-            <div class="popup">
-                <h3>Edit task:</h3>
-                <div class="popup-body">
-                    <p class="popup-info"></p>
-                    <div id="desc-div">
-                        <label for="desc-input"> description </label>
-                        <input type="text" name="description" id="desc-input" placeholder="What do you need to do ?" required>
+                <%}%>
+        </form>
+
+        <div class="popup">
+            <h3>Edit task:</h3>
+            <div class="popup-body">
+                <p class="popup-info"></p>
+                <div id="desc-div">
+                    <label for="desc-input"> description </label>
+                    <input type="text" name="description" id="desc-input" placeholder="What do you need to do ?"
+                        required>
+                </div>
+
+                <!-- Separator -->
+                <div class="horizontal-line"></div>
+
+                <!-- Div for data inputs (i.e: category and Date) -->
+                <div id="data-div">
+                    <!-- div for category selection option -->
+                    <div id="category-div">
+                        <label for="category"> Category </label>
+
+                        <select name="category" id="category">
+                            <option value="n/a"> Choose a category </option>
+                            <option value="personal">Personal</option>
+                            <option value="work">Work</option>
+                            <option value="school">School</option>
+                            <option value="cleaning">Cleaning</option>
+                            <option value="other">Other</option>
+                        </select>
                     </div>
-                    
+
                     <!-- Separator -->
-                    <div class="horizontal-line"></div>
-                    
-                    <!-- Div for data inputs (i.e: category and Date) -->
-                    <div id="data-div">
-                        <!-- div for category selection option -->
-                        <div id="category-div">
-                            <label for="category"> Category </label>
-                    
-                            <select name="category" id="category">
-                                <option value="n/a"> Choose a category </option>
-                                <option value="personal">Personal</option>
-                                <option value="work">Work</option>
-                                <option value="school">School</option>
-                                <option value="cleaning">Cleaning</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                    
-                        <!-- Separator -->
-                        <div class="vertical-line"></div>
-                    
-                        <!-- Div for date input -->
-                        <div id="date-div">
-                            <div>
-                                <label for="date"> Due Date </label>
-                                <input type="date" id="date" name="date">
-                            </div>
+                    <div class="vertical-line"></div>
+
+                    <!-- Div for date input -->
+                    <div id="date-div">
+                        <div>
+                            <label for="date"> Due Date </label>
+                            <input type="date" id="date" name="date">
                         </div>
                     </div>
-                    <button class="popup-btn accept">Submit</button>
-                    <button class="popup-btn cancel">Cancel</button>
                 </div>
+                <button class="popup-btn accept">OK</button>
+                <button class="popup-btn cancel">Cancel</button>
             </div>
+        </div>
     </section>
 
 
     <script type="text/javascript" src="/js/home.js"></script>
-    
+
 </body>
 
 </html>

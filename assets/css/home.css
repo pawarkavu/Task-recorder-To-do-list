@@ -8,7 +8,7 @@
 }
 
 .text-color{
-    color:rgb(102, 99, 99);
+    color:rgb(69 41 193);
 }
 
 /* Creates a horizontal line when applied to a div */
@@ -30,21 +30,22 @@
 body{
     margin: 0px;
     padding: 0px;
-    background-color: grey;
+    background-color: rgb(117, 102, 102);
+    font-family: "Lucida Handwriting", "Courier New", Cursive;
     
 }
 
 /* Settings for main container where all data is shown */
 #main-container{
-    background-color: white;
+    background-color: rgb(248, 250, 156);
     max-width: 700px;
     margin: 0 auto;
     padding-bottom: 30px;
+    border-radius: 10%;
 }
 
 /* Customization for app title */
 #app-title{
-    font-family: 'Times New Roman', Times, serif;
     font-weight: normal;
     text-align: center;
     padding-top: 20px;
@@ -55,9 +56,9 @@ body{
 label{
     color:rgb(95, 93, 93);
     text-transform:uppercase;
-    font-family: sans-serif;
     font-size: small;
     font-weight:normal;
+    font-weight: bold;
     padding-left: 15px;
 }
 
@@ -67,11 +68,12 @@ label{
 }
 
 #desc-input{
-    width: 100%;
+    width: 80%;
     border: none;
-    margin: 0px 0px 15px 0px;
+    margin: 10px 0px 15px 10px;
     padding: 5px 15px;
     outline: none;
+    font-family: "Lucida Handwriting", "Courier New", Cursive;
 }
 
 #desc-input:focus {
@@ -94,14 +96,15 @@ label{
 }
 
 #category{
-    width: 100%;
+    width: 90%;
     border: none;
-    margin: 0px 0px 15px 0px;
+    margin: 10px 0px 15px 10px;
     padding: 5px 15px;
     outline: none;
     background-color: white;
     color:rgb(119, 116, 116);
-    font-weight: bold;
+    /* font-weight: bold; */
+    font-family: "Lucida Handwriting", "Courier New", Cursive;
 }
 
 #category:focus {
@@ -110,14 +113,15 @@ label{
 
 /* Various Settings for date input box in the app */
 #date{
-    width: 100%;
+    width: 90%;
     border: none;
-    margin: 0px 0px 15px 0px;
+    margin: 10px 0px 15px 10px;
     padding: 5px 15px;
     outline: none;
     background-color: white;
     color:rgb(119, 116, 116);
-    font-weight: bold;
+    /* font-weight: bold; */
+    font-family: "Lucida Handwriting", "Courier New", Cursive;
 }
 
 #date:focus {
@@ -178,7 +182,7 @@ button:hover{
     box-sizing: border-box;
     width: 100%;
     height: auto;
-    border: 10px solid white;
+    border: 10px solid rgb(248, 250, 156);
     border-top: 0;
     border-bottom: 0;
 }
@@ -202,7 +206,6 @@ button:hover{
 
 .task-data *{
     color:rgb(119, 116, 116);
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .task-data p{
